@@ -1,30 +1,30 @@
 import { IsNotEmpty, MaxLength } from "class-validator";
 import { Entity, Column, PrimaryGeneratedColumn } from "typeorm";
 
-@Entity({name: 'tb_tarefa'}) 
+@Entity({ name: 'tb_tarefa' })
 export class Tarefa {
 
     @PrimaryGeneratedColumn()
-    id: number 
-    
+    id: number
+
     @IsNotEmpty()
     @MaxLength(50)
-    @Column({nullable: false, length:50})
+    @Column({ nullable: false, length: 50 })
     nome: string
-    
+
     @IsNotEmpty()
     @MaxLength(500)
-    @Column({nullable: false, length:500})
+    @Column({ nullable: false, length: 500 })
     descricao: string
-    
-     @IsNotEmpty()
+
+    @IsNotEmpty()
     @MaxLength(50)
-    @Column({nullable: false, length:50})
+    @Column({ nullable: false, length: 50 })
     responsavel: string
-    
+
     @Column()
     data: Date
-    
+
     @Column()
     status: boolean
 
