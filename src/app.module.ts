@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { Categoria } from './categoria/entities/categoria.entity';
-import { CaategoriaModule } from './categoria/modules/categoria.module';
+import { CategoriaModule } from './categoria/modules/categoria.module';
 import { Tarefa } from './tarefa/entities/tarefa.entity';
 import { TarefaModule } from './tarefa/modules/tarefa.module';
 
@@ -18,7 +18,7 @@ import { TarefaModule } from './tarefa/modules/tarefa.module';
       synchronize: true
     }),
     TarefaModule,
-    CaategoriaModule
+    CategoriaModule
   ],
   controllers: [],
   providers: [],

@@ -3,8 +3,8 @@ import { Categoria } from "../entities/categoria.entity";
 import { CategoriaService } from "../services/categoria.service";
 
 @Controller('/categoria')
-export class CategoriaController{
-    constructor(private readonly service: CategoriaService) {}
+export class CategoriaController {
+    constructor(private readonly service: CategoriaService) { }
 
     @Get()
     @HttpCode(HttpStatus.OK)
@@ -28,7 +28,7 @@ export class CategoriaController{
     @HttpCode(HttpStatus.CREATED)
     create(@Body() categoria): Promise<Categoria> {
         return this.service.create(categoria)
-    } 
+    }
 
     @Put()
     @HttpCode(HttpStatus.OK)

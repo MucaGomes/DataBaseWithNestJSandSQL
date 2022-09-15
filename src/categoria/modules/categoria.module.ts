@@ -10,4 +10,4 @@ import { CategoriaService } from "../services/categoria.service";
     controllers: [CategoriaController],
     exports: [TypeOrmModule]
 })
-export class CaategoriaModule{}
+export class CategoriaModule{}
