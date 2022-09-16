@@ -49,19 +49,22 @@ describe('Testes da tabela de Tarefas (e2e)', () => {
 
   })
 
-  it('02- Não irá atualizar uma tarefa que não existe no banco', async => {
+  it('02- Não irá atualizar uma tarefa que não existe no banco', async () => {
     return request(app.getHttpServer())
     .put('/tarefa')
     .send({
       id: 500,
-      nome: 'mario',
-      descricao: '',
-      responsavel: '',
-      data: '',
+      nome: 'Tarefa Diurna',  
+      descricao: 'Tarefa feita pela manhã',
+      responsavel: 'Muca',
+      data: '2022-09-15',
       status: true
     })
     .expect(404)
-  
+  })
+
+  afterAll(async () => {
+    await app.close()
   })
 
 });
