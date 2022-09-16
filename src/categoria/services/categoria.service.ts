@@ -57,7 +57,7 @@ export class CategoriaService {
         let categoriaUpdate = await this.findById(categoria.id)
 
         if(!categoriaUpdate || !categoria.id)
-        throw new HttpException('Tarefa não encontrada!', HttpStatus.NOT_FOUND)
+        throw new HttpException('categoria não encontrada!', HttpStatus.NOT_FOUND)
     
         return this.categoriaRepository.save(categoria)
     }

@@ -30,6 +30,7 @@ export class TarefaService {
                 categoria: true
             }
         })
+        
 
         if (!tarefa) 
             throw new HttpException('Tarefa não foi encontrada!', HttpStatus.NOT_FOUND)
